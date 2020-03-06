@@ -185,7 +185,31 @@ async function contractCall(func, args, value) {
 }
 
 
+ window.addEventListener('load', async() => {
+   //Display the loader .
+  $("#loader").show();
 
+  client = await Ae.Aepp();
+
+  var insuredLength = await callStatic('getinsuredLength', []); 
+  console.log(foodsLength)
+
+  for (let i = 1; i <= ; i++) {
+
+//call to the blockchain to get saved data
+  const insure = await callStatic('getinsurePerson', [i]);
+
+//Display our foods from  blockchain
+    insuredArray.push({
+      // name: foody.name,
+      fName: insure.fName,
+      lName: insure.lName,
+      id1 : insure.foodDesc,
+      index :i,  
+    })
+  }
+
+})
 
 
 
@@ -229,28 +253,28 @@ $('#loader').show();
 }
 		  // alert(gendar)
 
-const write = await contractCall("createInsureance", [fName, lName, id1, phone,
-								  email, address, city, state, fName2, lName2,
-								  phone2, email2, relation], 0);
+ const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
+ 										 address, city, state, fName2,
+ 										 lName2, phone2, email2, relation],0);
 
 		  insureArray.push({
-		  	fName : fName,
-		  	lName : lName,
+		  	fName : sure.fName,
+		  	lName : sure.lName,
 		  	// sex   : sex,
 		  	// dob : dob,
-		  	id1   : id1,
+		  	id1   : sure.id1,
 		  	// idd	  : idd,
-		  	phone : phone,
-		  	email :email,
-		  	address : address,
-		  	city : city,
-		  	state : state,
+		  	phone : sure.phone,
+		  	email : sure.email,
+		  	address : sure.address,
+		  	city : sure.city,
+		  	state : sure.state,
 		  		//Emergency contact details.
-		  	fName2 :fName2,
-		  	lName2 : lName2,
-		  	phone2 : phone2,
-		  	email2 : email2,
-		  	relation : relation,
+		  	fName2 : sure.fName2,
+		  	lName2 : sure.lName2,
+		  	phone2 : sure.phone2,
+		  	email2 : sure.email2,
+		  	relation : sure.relation,
 
 		  	index : insureArray.length + 1
 
