@@ -5,9 +5,9 @@ contract Insureance =
         { conAddress  : address,
           fName       : string,
           lName       : string,
+          // sex 		  : string, 
           id1         : string, 
-          sex 		  : string, 
-          id2         : int,
+          idd         : int,
           phone 		: int,
 				email 		: string,
 				address 	: string,
@@ -38,17 +38,17 @@ contract Insureance =
         require(alreadyInsured(id1),"person is not Insured")
         state.insurer[id1]
          
-    stateful entrypoint createInsureance(fName':string, lName':string, sex':string, id1':string, id2':int,phone': int, email':string,
+    stateful entrypoint createInsureance(fName':string, lName':string,  id1':string, idd':int,phone': int, email':string,
                                     address':string, city':string, state':string, fName2':string,
                                     lName2':string,email2':string,relation':string, phone2':int) =
         require(!alreadyInsured(id1'),"person is already Insured")
-        insureDetails(fName',lName',sex',id1',id2',phone',email',address', city', state',fName2', lName2',email2', relation', phone2')
+        insureDetails(fName',lName',id1',idd',phone',email',address', city', state',fName2', lName2',email2', relation', phone2')
           
           
-    stateful function insureDetails(fName':string ,lName':string, sex':string, id1':string , id2': int,phone': int, email':string,
+    stateful function insureDetails(fName':string ,lName':string, id1':string , idd': int,phone': int, email':string,
                                     address':string, city':string, state':string, fName2':string,
                                     lName2':string,email2':string,relation':string, phone2':int) =
-        let person = { conAddress = Call.caller, fName = fName', lName = lName',sex = sex', id1 = id1',id2 = id2',
+        let person = { conAddress = Call.caller, fName = fName', lName = lName', id1 = id1',idd = idd',
                        phone = phone', email = email', address = address', city=city', state=state', fName2=fName2',
                        lName2 = lName2',email2 = email2',relation= relation', phone2=phone2'}
                        
@@ -57,7 +57,8 @@ contract Insureance =
 		
 `;
 
-const contractAddress = '';
+const contractAddress = 'ct_2KgFUmGAHSnduyUNT1htXdjQnsDzzHLya3UcQkNsR39Ch3Aao8';
+
 
 var client = null;
 var insuredLength = 0;
@@ -108,34 +109,34 @@ document.getElementById('regBtn').addEventListener('click', async function(){
         
 	const fName = ($('#fName').val()),
 		  lName = ($('#lName').val()),
-		  gendar = gender,
+		  // sex = gender,
 		  // dob = ($('#dob').val()),
 		  id1 = ($('#id1').val()),
-		  id = ($('#1d2').val()),
+		  idd = ($('#1d2').val()),
 		  phone = ($('#phone').val()),
 		  email = ($('#email').val()),
 		  address = ($('#address').val()),
 		  city = ($('#city').val()),
 		  state = mag,
-		  fname2 = ($('#fName2').val()),
-		  last2 = ($('#lName2').val()),
+		  fName2 = ($('#fName2').val()),
+		  lName2 = ($('#lName2').val()),
 		  phone2 = ($('#phone2').val()),
 		  email2 = ($('#email2').val()),
 		  relation = ($('#relation').val());
 }
 		  // alert(gendar)
 
-await contractCall('createInsureance', [fName, lName, sex, id1, id, phone,
-								  email, address, city, state, fname2, last2,
+await contractCall('createInsureance', [fName, lName, id1, phone,
+								  email, address, city, state, fName2, lName2,
 								  phone2, email2, relation], 0);
 
 		  insureArray.push({
 		  	fName : fName,
 		  	lName : lName,
-		  	sex   : sex,
+		  	// sex   : sex,
 		  	// dob : dob,
 		  	id1   : id1,
-		  	id2 : id2,
+		  	idd	  : idd,
 		  	phone : phone,
 		  	email :email,
 		  	address : address,
