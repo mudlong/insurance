@@ -165,7 +165,7 @@ $('#loader').show();
 }
 		  // alert(gendar)
 
-const write = await contractCall("createInsureance", [fName, lName, id1, phone,
+const write = await contractCall("createInsureance", [fName, lName, id1,idd, phone,
 								  email, address, city, state, fName2, lName2,
 								  phone2, email2, relation], 0);
 
