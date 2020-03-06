@@ -62,7 +62,7 @@ const contractAddress = 'ct_2KgFUmGAHSnduyUNT1htXdjQnsDzzHLya3UcQkNsR39Ch3Aao8';
 
 var client = null;
 var insuredLength = 0;
-var insuredArray = [];
+var insureArray = [];
 
 //Create a asynchronous read call for our smart contract
 async function callStatic(func, args) {
@@ -102,7 +102,7 @@ document.getElementById('regBtn').addEventListener('click', async function(){
 	var mag = myState.options[myState.selectedIndex].text;
 	if(mag == " "|| mag == "state")
 		  {
-		  	alert('please select a state')
+		  	console.log ('please select a state')
 		  }else{
 		
 
@@ -152,7 +152,8 @@ await contractCall('createInsureance', [fName, lName, id1, phone,
 		  	index : insureArray.length + 1
 
 		})
-		  renderInsure();
+		  console.log("Insurance completed ")
+		  // renderInsure();
 })
 // $('#regHos').click(async function(){
 // 	const hName = ($('#hName').val()),
