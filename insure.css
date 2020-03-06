@@ -1,0 +1,160 @@
+body{
+    /*background-color: darkgray;*/
+    overflow-x: hidden;
+    /*width: 100%;*/
+}
+h1{
+    width: 99%;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    background-color: maroon;
+}
+header ul{
+    float: right;
+}
+header li{
+    display: block;
+    float: left;
+    /*width: 100px;*/
+    padding: 3px;
+    list-style-type: none;
+    list-style: none;
+
+    float: left;
+    display: block;
+    padding: 2px;
+    margin: 4px;
+    text-align: center;
+    width:100px;
+    cursor: pointer;
+    background-color: maroon;
+    font-size: 15px;
+    list-style-type: none;
+}
+header li a{
+    /*background-color: purple;*/
+    color: lightblue;
+    text-decoration: none;
+    /*width: 100px;*/
+}
+select,input[type=date],[ type=text],[type="phone"],input[type=password],input[type=submit],input[type=email]{
+	border-radius: 2px;
+	border: 1px solid silver;
+	display: inline-block;
+	padding:1px;
+	margin: 1px auto;
+    width: 37%;
+    color:black;
+    background-color: #ffeafc;
+}
+input[type="checkbox"],[type="radio"]{
+    display: inline-flex;
+    overflow-y: hidden;
+    height: auto;  
+    position: relative;
+}
+
+.histo{
+    width: 80%;
+    margin:  15px auto; 
+    /*background-color: red;*/
+    text-align: center;
+      color:#Ace;
+    text-shadow: 1px 2px 2px darkblue, 1px 0 2px black, 2px 0 2px darkblue;
+}
+.histo textarea{
+    width:60%;
+    margin: 15px auto;
+    padding: 10px;
+    align-self: center;
+    /*text-align: center;*/
+}
+
+label{
+    /*vertical-align: 10px;*/
+    text-align: right;
+    /*text-align:center;*/
+    /*padding-right: 10px;*/
+    display: inline-block;
+    font-weight: bolder;
+    margin: 5px auto;
+    margin-right: 20px;
+    width:30%;
+    color:#Ace;
+    text-shadow: 1px 2px 2px darkblue, 1px 0 2px black, 2px 0 2px darkblue;
+
+}
+form{
+    /*background-color: gray;*/
+    width:90%
+    margin 0 auto;
+    /*text-align: center;*/
+}
+h3{
+    text-align: center;
+    color:;
+    padding: 10px;
+}
+.home{
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    /*float: left;*/
+
+}
+.home button{
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+.client{
+    /*display: none;*/
+}
+.hospital{
+    display: none;
+
+}
+.hospital {
+margin-top: 90px;
+margin: 0 auto;
+}
+button {
+    background-color:maroon;
+    color: #afce;
+    padding: 6px;
+    margin: 10px auto;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 42%;
+    /*display: block;*/
+    /*float: left;*/
+    border: 2px solid #abcddf;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: tahoma;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+fieldset{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgba(3,5,8,.7);
+    background: 
+    linear-gradient(rgba(22,22,22,.7),rgba(22,44,90,.8)),
+     /*url("image (2).jpg");*/
+      /*background-repeat: no-repeat;*/
+    /*background-position: center ;*/
+    background-attachment: scroll;
+    margin-top: 10px;
+
+
+}
+legend{
+    text-align: center;
+    color:coral;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insurance</title>
+	<link rel="stylesheet" type="text/css" href="insure.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../../code.jquery.com/jquery-1-11-3.min.js"></script>
+    <script src="/ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="jquery-1.12.2.min.js"></script>
+
+</head>
+<body>
+	<header>
+		<h1 align="center">Aeternity Health Insurance and History</h1>
+		<ul>
+			<li ><a href="">Home</a></li>
+			<li ><a href="">How it works</a></li>
+			<li ><a href="">ContactUs</a></li>
+			<li ><a href="">About</a></li>
+		</ul>
+	</header>
+	  <div id="message">
+            <div id="loader" class="alert alert-light">
+              <img src="spinner4.gif">
+              <div><b style="color:#2FFF0F;">...Loading...</b></div>
+            </div>
+          </div>
+	<div class="home">
+		<button>Hospital</button>
+		<button>Client</button>
+	</div>
+	<div class="client">
+
+		<form method="post" >
+			<fieldset>
+			<legend><center><h2>Complete the form</h2></center></legend>
+			<h3>Profile</h3>
+
+			<label for="fName">First Name :</label>
+			 <input type="text" id="fName" name="fName" placeholder="First Name" required/>
+			<label for="sName">Last Name :</label>
+			 <input type="text" id="lName" name="SName" placeholder="Last Name"  />
+
+
+		<div class="histo">
+			<label for="select">Gender :<span style="color:red;">*</span></label>
+			 	<input type="radio" name="gender" value="Male">Male 
+   				<input type="radio" name="gender" value="Female">Female 
+   				<input type="radio" name="gender" value="Others">Others 
+		
+		</div>	
+
+			<label for="date">Birthday</label>
+			 <input type="date" id="dob" name="date">
+			<label for="ID">ID No:<span style="color:red;">*</span></label>
+			 <input type="text" id="id1" name="ID" placeholder="National Identity Number" required="national identification number">
+			 <label for="ID">Driven licence:<span style="color:red;"></span></label>
+			 <input type="text" id2="2" name="ID" placeholder="(optional)"/>
+
+			<label for="phone">Phone:</label>
+
+			 <input type="phone" id="phone" name="phone" autocomplete="" required placeholder="phone no" />
+			<label for="email">Email:</label>
+			 <input type="email" id="email" name="email"placeholder="example@gmail.com">
+			<label for="Address:">Address:</label>
+			 <input type="text" id="address" name="address" autocomplete="" required placeholder="Address" />
+			<label for="city">City:</label>
+			 <input type="text" id="city" name="city" required placeholder="City"/>
+			
+			<label for="country">State:</label>
+			<select id='state' required>
+				<option disabled="states" placeholder="states" selected ="states">state</option>
+				<option>abia</option>
+				<option>abuja</option>
+				<option>plateau</option>
+
+			</select>
+
+
+				<h3>Emergency Contact</h3>
+
+			<label for="fName">First Name :</label>
+			<input type="text" id="fName2" name="fName" placeholder="First Name" required/>
+			<label for="sName">Last Name :</label>
+			 <input type="text" id="lName2" name="SName" placeholder="Last Name" required/>	
+			  <label for="phone">Phone:</label>
+			<input type="phone" id="phone2" name="phone" autocomplete="" required placeholder="phone No" />
+			<label for="email">Email</label>
+			<input type="email" id="email2" name="email" placeholder="example@gmail.com">
+
+			<label for="Relation">Relation</label>
+			<input type="text" id="relation" name="Relation" placeholder="Relation?" required>
+
+				<h3>Medical History</h3>
+
+		<div class="histo">
+			<input type="checkbox" name="histor" value="Asthma">Asthma
+			<input type="checkbox" name="vehicle1" value="HIV/AIDS">HIV/AIDS
+			<input type="checkbox" name="vehicle1" value="Sickel Cell">Sickel Cell
+			<input type="checkbox" name="vehicle1" value="accident">accident
+			<input type="checkbox" name="vehicle1" value="Handicap">Handicap
+			<input type="checkbox" name="vehicle1" value="Hypertenshion">Hypertenshion
+			<input type="checkbox" name="vehicle1" value="Eyes">Eyes
+			<input type="checkbox" name="vehicle1" value="Cancer">Cancer
+			<input type="checkbox" name="vehicle1" value=""><br>
+			<textarea placeholder="tell us more..."></textarea>
+		</div>	
+			
+			<!-- <center><input id="regBtn" type="Submit" /></center> -->
+		
+
+			<center><input id="regBtn" type="submit" value="submit" name="submit"></center>
+		</form></fieldset>
+			<!-- <button id="regBtn">submit</button> -->
+
+	</div>
+		<div class="hospital">
+			<form>
+				<fieldset>
+					<legend>Hospital Registration</legend>
+					<label for="name">Hospital Name:</label>
+					 <input type="text" id="hName" name="Hospital" placeholder="Hospital Name" required/>
+					<label for="reg">Reg No:</label>
+					 <input type="text" id="regNo" name="reg" placeholder="Reg No" required="">
+					<label for="address">Address</label>
+					<input type="text" id="hAddress" name="address" placeholder="Address" required="">
+					<label>state:</label>
+					<select required id="state">
+						<option class="state">Abia</option>
+						<option class="state" selected>Abuja</option>
+						<option class="state">Adamawa</option><option class="state">Akwa Ibom</option>
+						<option class="state">Anambara</option><option class="state">Bauchi</option>
+						<option class="state">bayelsa</option>
+					</select>
+					<label for="city">City:</label>
+					<input type="text" id="hCity" name="city" required placeholder="City">
+					<label for="phone">TelNo:</label>
+					<input type="text" id="hPhone" name="phone" placeholder="Phone" required>
+					<label for="email">Email:</label>
+					<input type="email" id="hEmail" name="email" placeholder="Hospital Name" required>
+					<!-- <input type="submit" value="Submit" align="center"> -->
+					<center><button id="regHos" align="center">Submit</button></center>
+
+
+
+				</fieldset>
+			</form>
+		</div>
+	</form>
+</div> 
+<footer>
+	<!-- <h2>with &love; for Aeternity 101</h2> -->
+</footer>
+</body>
+</html>
+<script type="text/javascript" src="aeinsure.js"></script>
+ <script src = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.map></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script> 
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+	<script id="template" type="text/x-tmpl-mustache">
+	</script>
+
