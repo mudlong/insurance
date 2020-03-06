@@ -192,7 +192,7 @@ async function contractCall(func, args, value) {
   client = await Ae.Aepp();
 
   var insuredLength = await callStatic('getinsuredLength', []); 
-  console.log(foodsLength)
+  console.log(insuredLength)
 
   for (let i = 1; i <= ; i++) {
 
