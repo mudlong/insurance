@@ -1,7 +1,67 @@
 const contractSource =`
-contract Insureance = 
+// payable contract Insureance = 
+// 	type s = string
 	
-	type s = string
+//     record insure =
+//         { conAddress  : address,
+//           fName       : string,
+//           lName       : string,
+//           // sex 		  : string, 
+//           id1         : string, 
+//           idd         : string,
+//           phone 		: int,
+// 				email 		: string,
+// 				address 	: string,
+// 				city 		: string,
+// 				state 		: string,
+// 				// Emergency contact info entry
+// 				fName2 		: string,
+// 				lName2		: string,
+// 				email2 		: string,
+// 				relation	: string,
+// 				phone2 		: int}   
+//     record state = 
+//         { insurer       : map(string, insure),
+//           insuredLength : int }
+          
+//     entrypoint init() = 
+//         { insurer       = {},
+//           insuredLength = 0 }
+    
+    
+//     entrypoint getinsuredLength() : int =
+//         state.insuredLength
+    
+//     entrypoint alreadyInsured(ident :  s) : bool = 
+//         Map.member(ident , state.insurer)
+        
+//     entrypoint getinsurePerson(id1:string) = 
+//         require(alreadyInsured(id1),"person is not Insured")
+//         state.insurer[id1]
+         
+//     stateful entrypoint createInsureance(fName': s, lName': s,  id1': s, idd':int,phone': int, email': s,address': s, city': s, 
+//   										 state': s, fName2': s, lName2': s,email2': s,relation': s, phone2':int) =
+//         require(!alreadyInsured(id1'),"person is already Insured")
+//         insureDetails(fName',lName',id1',idd',phone',email',address', city', state',fName2', lName2',email2', relation', phone2')
+          
+          
+//     stateful function insureDetails(fName': s ,lName': s, id1': s , idd': int,phone': int, email': s,address': s, city': s, state': s,
+//   								    fName2': s, lName2': s,email2': s,relation': s, phone2':int) =
+//         let person = { conAddress = Call.caller, fName = fName', lName = lName',
+//         			   id1 = id1',idd = idd', phone = phone', email = email',
+//         			   address = address', city=city', state=state',
+//         			   fName2=fName2',lName2 = lName2',email2 = email2',
+//         			   relation= relation', phone2=phone2'}
+                       
+//         let index  = getinsuredLength() + 1
+//         put( state {insurer[id1'] = person, insuredLength = index}) 
+
+
+payable contract Insureance = 
+    type i = int
+    type s = string
+    type a = address
+    type b = bool
 	
     record insure =
         { conAddress  : address,
@@ -57,9 +117,12 @@ contract Insureance =
         let index  = getinsuredLength() + 1
         put( state {insurer[id1'] = person, insuredLength = index}) 
 		
+        
+
+		
 `;
 
-const contractAddress = 'ct_2KgFUmGAHSnduyUNT1htXdjQnsDzzHLya3UcQkNsR39Ch3Aao8';
+const contractAddress ='ct_Adoi3hX7NwCEMu3pXoq3xGFMyba47npTbbG42mc7rggJTqUbx';
 
 
 var client = null;
@@ -165,7 +228,7 @@ $('#loader').show();
 }
 		  // alert(gendar)
 
-const write = await contractCall("createInsureance", [fName, lName, id1,idd, phone,
+const write = await contractCall("createInsureance", [fName, lName, id1, idd, phone,
 								  email, address, city, state, fName2, lName2,
 								  phone2, email2, relation], 0);
 
