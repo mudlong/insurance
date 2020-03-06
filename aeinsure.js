@@ -69,7 +69,7 @@ payable contract Insureance =
           lName       : string,
           // sex 		  : string, 
           id1         : string, 
-          idd         : int,
+          // idd         : int,
           phone 		: int,
 				email 		: string,
 				address 	: string,
@@ -100,16 +100,16 @@ payable contract Insureance =
         require(alreadyInsured(id1),"person is not Insured")
         state.insurer[id1]
          
-    stateful entrypoint createInsureance(fName': s, lName': s,  id1': s, idd':int,phone': int, email': s,address': s, city': s, 
+    stateful entrypoint createInsureance(fName': s, lName': s,  id1': s,phone': int, email': s,address': s, city': s, 
   										 state': s, fName2': s, lName2': s,email2': s,relation': s, phone2':int) =
         require(!alreadyInsured(id1'),"person is already Insured")
-        insureDetails(fName',lName',id1',idd',phone',email',address', city', state',fName2', lName2',email2', relation', phone2')
+        insureDetails(fName',lName',id1',phone',email',address', city', state',fName2', lName2',email2', relation', phone2')
           
           
-    stateful function insureDetails(fName': s ,lName': s, id1': s , idd': int,phone': int, email': s,address': s, city': s, state': s,
+    stateful function insureDetails(fName': s ,lName': s, id1': s, phone': int, email': s,address': s, city': s, state': s,
   								    fName2': s, lName2': s,email2': s,relation': s, phone2':int) =
         let person = { conAddress = Call.caller, fName = fName', lName = lName',
-        			   id1 = id1',idd = idd', phone = phone', email = email',
+        			   id1 = id1', phone = phone', email = email',
         			   address = address', city=city', state=state',
         			   fName2=fName2',lName2 = lName2',email2 = email2',
         			   relation= relation', phone2=phone2'}
@@ -122,7 +122,8 @@ payable contract Insureance =
 		
 `;
 
-const contractAddress ='ct_Adoi3hX7NwCEMu3pXoq3xGFMyba47npTbbG42mc7rggJTqUbx';
+// const contractAddress ='ct_Adoi3hX7NwCEMu3pXoq3xGFMyba47npTbbG42mc7rggJTqUbx';
+const contractAddress ='ct_2UK6MxesWshWRxWMcno5Qs8bweZKVjkbyBxDhs7LoDvYZvzmyJ';
 
 
 var client = null;
@@ -214,7 +215,7 @@ $('#loader').show();
 		  // sex = gender,
 		  // dob = ($('#dob').val()),
 		  id1 = ($('#id1').val()),
-		  idd = ($('#1d2').val()),
+		  // idd = ($('#1d2').val()),
 		  phone = ($('#phone').val()),
 		  email = ($('#email').val()),
 		  address = ($('#address').val()),
@@ -228,7 +229,7 @@ $('#loader').show();
 }
 		  // alert(gendar)
 
-const write = await contractCall("createInsureance", [fName, lName, id1, idd, phone,
+const write = await contractCall("createInsureance", [fName, lName, id1, phone,
 								  email, address, city, state, fName2, lName2,
 								  phone2, email2, relation], 0);
 
@@ -238,7 +239,7 @@ const write = await contractCall("createInsureance", [fName, lName, id1, idd, ph
 		  	// sex   : sex,
 		  	// dob : dob,
 		  	id1   : id1,
-		  	idd	  : idd,
+		  	// idd	  : idd,
 		  	phone : phone,
 		  	email :email,
 		  	address : address,
