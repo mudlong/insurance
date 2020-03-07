@@ -96,6 +96,9 @@ h3{
     color:;
     padding: 10px;
 }
+#loader{
+    visibility: hidden;
+}
 .home{
     width: 70%;
     height: 30px;
