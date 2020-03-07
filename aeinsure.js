@@ -60,6 +60,8 @@ payable contract Insureance =
 		
         
 
+
+
 		
 `;
 
