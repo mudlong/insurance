@@ -194,7 +194,7 @@ async function contractCall(func, args, value) {
   var insuredLength = await callStatic('getinsuredLength', []); 
   console.log(insuredLength)
 
-  for (let i = 1; i <= ; i++) {
+  for (let i = 1; i <= insuredLength; i++) {
 
 //call to the blockchain to get saved data
   const insure = await callStatic('getinsurePerson', [i]);
@@ -252,6 +252,9 @@ $('#loader').show();
 		  relation = ($('#relation').val());
 }
 		  // alert(gendar)
+		      const carId = await callStatic('getinsuredLength', [])
+
+    const index = await callStatic('getCar', [carId])
 
  const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
  										 address, city, state, fName2,
