@@ -123,7 +123,8 @@ payable contract Insureance =
 `;
 
 // const contractAddress ='ct_Adoi3hX7NwCEMu3pXoq3xGFMyba47npTbbG42mc7rggJTqUbx';
-const contractAddress ='ct_2UK6MxesWshWRxWMcno5Qs8bweZKVjkbyBxDhs7LoDvYZvzmyJ';
+// const contractAddress ='ct_2UK6MxesWshWRxWMcno5Qs8bweZKVjkbyBxDhs7LoDvYZvzmyJ';
+const contractAddress ='ct_hthqd1oqWjiVTjJ8PQWenNFWmNifUyQWSbyUsmVTtC9XGmHXM';
 
 
 var client = null;
