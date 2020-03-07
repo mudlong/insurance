@@ -65,8 +65,6 @@ payable contract Insureance =
 		
 `;
 
-// const contractAddress ='ct_Adoi3hX7NwCEMu3pXoq3xGFMyba47npTbbG42mc7rggJTqUbx';
-// const contractAddress ='ct_2UK6MxesWshWRxWMcno5Qs8bweZKVjkbyBxDhs7LoDvYZvzmyJ';
 const contractAddress ='ct_hthqd1oqWjiVTjJ8PQWenNFWmNifUyQWSbyUsmVTtC9XGmHXM';
 
 
@@ -74,28 +72,6 @@ var client = null;
 var insuredLength = 0;
 var insureArray = [];
 
-// Create a asynchronous read call for our smart contract
-// async function callStatic(func, args) {
-//   //Create a new contract instance that we can interact with
-//   const contract = await client.getContractInstance(contractSource, {contractAddress});
-//   //Make a call to get data of smart contract func, with specefied arguments
-//   console.log('args', args);
-//   console.log('func', func);
-//   const calledGet = await contract.call(func, args, {callStatic: true}).catch(e => console.error(e));
-//   console.log('calledGet', calledGet);
-//   //Make another call to decode the data received in first call
-//   const decodedGet = await calledGet.decode().catch(e => console.error(e));
-
-//   return decodedGet;
-// }
-
-// //Create a asynchronous write call for our smart contract
-// async function contractCall(func, args, value) {
-//   const contract = await client.getContractInstance(contractSource, {contractAddress});
-//   //Make a call to write smart contract func, with aeon value input
-//   const calledSet = await contract.call(func, args, {amount: value}).catch(e => console.error(e));
-//   return calledSet;
-// }
 
 async function callStatic(func, args) {
   //Create a new contract instance that we can interact with
