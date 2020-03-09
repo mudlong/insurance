@@ -71,7 +71,7 @@ var insuredArray = [];
 function renderInsure(){   
   var template = $('#template').html();
   Mustache.parse(template);
-  var rendered = Mustache.render(template, {insureArray});
+  var rendered = Mustache.render(template, {insuredArray});
   $('#insured').html(rendered);
 }
 
@@ -130,7 +130,8 @@ async function contractCall(func, args, value) {
     })
   }
   console.log("done getting")
-  $("#loader").show();
+  renderInsure();
+  $("#loader").hide();
 
 
 })
