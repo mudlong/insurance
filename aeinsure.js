@@ -176,8 +176,9 @@ $('#loader').show();
 		  email2 = ($('#email2').val()),
 		  relation = ($('#relation').val());
 }
-		  // alert(gendar)
- const index = await callStatic('getinsurePerson', [])
+		  console.log(gendar)
+		  console.log(fName2)
+ // const index = await callStatic('getinsurePerson', [])
 
  const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
  										 address, city, state, fName2,
