@@ -179,7 +179,7 @@ $('#loader').show();
 		  // alert(gendar)
 		      const carId = await callStatic('getinsuredLength', [])
 
-    const index = await callStatic('getCar', [carId])
+    const index = await callStatic('getinsurePerson', [carId])
 
  const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
  										 address, city, state, fName2,
