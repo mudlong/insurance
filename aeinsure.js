@@ -61,7 +61,8 @@ payable contract Insureance =
 		
 `;
 
-const contractAddress ='ct_hthqd1oqWjiVTjJ8PQWenNFWmNifUyQWSbyUsmVTtC9XGmHXM';
+// const contractAddress ='ct_hthqd1oqWjiVTjJ8PQWenNFWmNifUyQWSbyUsmVTtC9XGmHXM';
+const contractAddress='ct_2rCR9HebjFTMD5PQ1LpbzYdTzzm5ciVQepHzvkEUTmsUbY5C3N';
 
 var client = null;
 var insuredLength = 0;
