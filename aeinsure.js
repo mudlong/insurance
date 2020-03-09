@@ -118,7 +118,7 @@ async function contractCall(func, args, value) {
   for (let i = 1; i <= insuredLength; i++) {
 
 //call to the blockchain to get saved data
-  const insure = await callStatic('getinsurePerson', [i]);
+  const insure = await callStatic('getinsurePerson', [A2020]);
 
 //Display our foods from  blockchain
     insuredArray.push({
