@@ -130,8 +130,8 @@ async function contractCall(func, args, value) {
     })
   }
   console.log("done getting")
-  renderInsure();
   $("#loader").hide();
+  renderInsure();
 
 
 })
@@ -177,9 +177,7 @@ $('#loader').show();
 		  relation = ($('#relation').val());
 }
 		  // alert(gendar)
-		      const carId = await callStatic('getinsuredLength', [])
-
-    const index = await callStatic('getinsurePerson', [carId])
+ const index = await callStatic('getinsurePerson', [])
 
  const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
  										 address, city, state, fName2,
