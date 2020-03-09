@@ -113,12 +113,12 @@ async function contractCall(func, args, value) {
   client = await Ae.Aepp();
 
   var insuredLength = await callStatic('getinsuredLength', []); 
-  console.log(insuredLength)
+  console.log('persons :' +insuredLength)
 
   for (let i = 1; i <= insuredLength; i++) {
 
 //call to the blockchain to get saved data
-  const insure = await callStatic('getinsurePerson', [A2020]);
+  const insure = await callStatic('getinsurePerson', ['A2020']);
 
 //Display our foods from  blockchain
     insuredArray.push({
