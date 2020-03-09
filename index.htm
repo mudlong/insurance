@@ -4,27 +4,30 @@
 	<title>Insurance</title>
 	<link rel="stylesheet" type="text/css" href="insure.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+    crossorigin="anonymous"> -->
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="../../code.jquery.com/jquery-1-11-3.min.js"></script>
-    <script src="/ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- <script src="../../code.jquery.com/jquery-1-11-3.min.js"></script> -->
+    <!-- <script src="/ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
     <script src="jquery-1.12.2.min.js"></script>
 
 </head>
 <body>
 	<header>
 		<h1 align="center">Aeternity Health Insurance and History</h1>
+	</div>
+		<div class="nav">
 		<ul>
 			<li ><a href="">Home</a></li>
 			<li ><a href="">How it works</a></li>
 			<li ><a href="">ContactUs</a></li>
 			<li ><a href="">About</a></li>
-		</ul>
+		</ul></div>
 	</header>
+	
 	  <div id="message">
             <div id="loader" class="alert alert-light">
               <img src="spinner4.gif">
@@ -35,8 +38,24 @@
 		<button>Hospital</button>
 		<button>Client</button>
 	</div>
-	<div class="client">
 
+ <div id="insured">
+  <p>fName</p>
+  <p>lName</p>
+  </div>
+
+
+    <script id="template" type="text/x-tmpl-mustache">
+      {{#insureArray}}
+     <p>{{fName}}</p>
+     <p>{{lName}}</p>
+     <p>{{id1}}</p>
+
+       {{/foodArray}}
+    </script>
+<div class="clearfix"></div>
+
+	<div class="client">
 		<form method="post" >
 			<fieldset>
 			<legend><center><h2>Complete the form</h2></center></legend>
@@ -44,7 +63,7 @@
 
 			<label for="fName">First Name :</label>
 			 <input type="text" id="fName" name="fName" placeholder="First Name" required/>
-			<label for="sName">Last Name :</label>
+			<label for="lName">Last Name :</label>
 			 <input type="text" id="lName" name="SName" placeholder="Last Name"  />
 
 
@@ -61,7 +80,7 @@
 			<label for="ID">ID No:<span style="color:red;">*</span></label>
 			 <input type="text" id="id1" name="ID" placeholder="National Identity Number" required="national identification number">
 			 <label for="ID">Driven licence:<span style="color:red;"></span></label>
-			 <input type="text" id2="2" name="ID" placeholder="(optional)"/>
+			 <input type="text" id2="idd" name="ID" placeholder="(optional)"/>
 
 			<label for="phone">Phone:</label>
 
@@ -155,6 +174,7 @@
 	</form>
 </div> 
 <footer>
+
 	<!-- <h2>with &love; for Aeternity 101</h2> -->
 </footer>
 </body>
@@ -163,7 +183,8 @@
  <script src = https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.map></script>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script> 
+  <script src="https://unpkg.com/@aeternity/aepp-sdk@6.1.2/dist/aepp-sdk.browser-script.js"></script>
+  <!-- <script src="https://unpkg.com/@aeternity/aepp-sdk/dist/aepp-sdk.browser-script.js"></script>  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script> 
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"

@@ -57,21 +57,22 @@ payable contract Insureance =
         			   relation= relation', phone2=phone2'}              
         let index  = getinsuredLength() + 1
         put( state {insurer[id1'] = person, insuredLength = index}) 
-		
-        
-
-
 
 		
 `;
 
 const contractAddress ='ct_hthqd1oqWjiVTjJ8PQWenNFWmNifUyQWSbyUsmVTtC9XGmHXM';
 
-
 var client = null;
 var insuredLength = 0;
 var insureArray = [];
 
+function renderInsure(){   
+  var template = $('#template').html();
+  Mustache.parse(template);
+  var rendered = Mustache.render(template, {insureArray});
+  $('#insured').html(rendered);
+}
 
 async function callStatic(func, args) {
   //Create a new contract instance that we can interact with
@@ -124,7 +125,7 @@ async function contractCall(func, args, value) {
       // name: foody.name,
       fName: insure.fName,
       lName: insure.lName,
-      id1 : insure.foodDesc,
+      id1 : insure.id1,
       index :i,  
     })
   }
