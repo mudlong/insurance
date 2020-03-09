@@ -66,7 +66,7 @@ const contractAddress='ct_2rCR9HebjFTMD5PQ1LpbzYdTzzm5ciVQepHzvkEUTmsUbY5C3N';
 
 var client = null;
 var insuredLength = 0;
-var insureArray = [];
+var insuredArray = [];
 
 function renderInsure(){   
   var template = $('#template').html();
@@ -184,7 +184,7 @@ $('#loader').show();
  										 address, city, state, fName2,
  										 lName2, phone2, email2, relation],0);
 
-		  insureArray.push({
+		  insuredArray.push({
 		  	fName : sure.fName,
 		  	lName : sure.lName,
 		  	// sex   : sex,
