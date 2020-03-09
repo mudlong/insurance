@@ -176,7 +176,7 @@ $('#loader').show();
 		  email2 = ($('#email2').val()),
 		  relation = ($('#relation').val());
 }
-		  console.log(gendar)
+		  console.log(email2)
 		  console.log(fName2)
  // const index = await callStatic('getinsurePerson', [])
 
