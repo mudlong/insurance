@@ -175,9 +175,10 @@ $('#loader').show();
 		  phone2 = ($('#phone2').val()),
 		  email2 = ($('#email2').val()),
 		  relation = ($('#relation').val());
-}
 		  console.log(email2)
 		  console.log(fName2)
+		  
+}
  // const index = await callStatic('getinsurePerson', [])
 
  // const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
