@@ -155,10 +155,7 @@ $('#loader').show();
 	if(mag == " "|| mag == "state")
 		  {
 		  	console.log ('please select a state')
-		  }else{
-		
-
-        
+		  }else{    
 	const fName = ($('#fName').val()),
 		  lName = ($('#lName').val()),
 		  // sex = gender,
@@ -178,38 +175,39 @@ $('#loader').show();
 		  console.log(email2)
 		  console.log(fName2)
 		  
-}
+
  // const index = await callStatic('getinsurePerson', [])
 
- // const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
- // 										 address, city, state, fName2,
- // 										 lName2, phone2, email2, relation],0);
+ const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
+ 										 address, city, state, fName2,
+ 										 lName2, phone2, email2, relation],0); 
 
-	// 	  insuredArray.push({
-	// 	  	fName : sure.fName,
-	// 	  	lName : sure.lName,
-	// 	  	// sex   : sex,
-	// 	  	// dob : dob,
-	// 	  	id1   : sure.id1,
-	// 	  	// idd	  : idd,
-	// 	  	phone : sure.phone,
-	// 	  	email : sure.email,
-	// 	  	address : sure.address,
-	// 	  	city : sure.city,
-	// 	  	state : sure.state,
-	// 	  		//Emergency contact details.
-	// 	  	fName2 : sure.fName2,
-	// 	  	lName2 : sure.lName2,
-	// 	  	phone2 : sure.phone2,
-	// 	  	email2 : sure.email2,
-	// 	  	relation : sure.relation,
+		  insuredArray.push({
+		  	fName : sure.fName,
+		  	lName : sure.lName,
+		  	// sex   : sex,
+		  	// dob : dob,
+		  	id1   : sure.id1,
+		  	// idd	  : idd,
+		  	phone : sure.phone,
+		  	email : sure.email,
+		  	address : sure.address,
+		  	city : sure.city,
+		  	state : sure.state,
+		  		//Emergency contact details.
+		  	fName2 : sure.fName2,
+		  	lName2 : sure.lName2,
+		  	phone2 : sure.phone2,
+		  	email2 : sure.email2,
+		  	relation : sure.relation,
 
-	// 	  	index : insureArray.length + 1
+		  	index : insureArray.length + 1
+		})
 
-	// 	})
 		  $('#loader').hide();
 		  console.log("Insurance completed ");
 		  // renderInsure();
+}
 })
 // $('#regHos').click(async function(){
 // 	const hName = ($('#hName').val()),
