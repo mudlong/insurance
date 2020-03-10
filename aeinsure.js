@@ -169,18 +169,13 @@ $('#loader').show();
 		  state = mag,
 		  fName2 = ($('#fName2').val()),
 		  lName2 = ($('#lName2').val()),
-		  phone2 = ($('#phone2').val()),
 		  email2 = ($('#email2').val()),
-		  relation = ($('#relation').val());
-		  console.log(email2)
-		  console.log(fName2)
-		  
-
+		  relation = ($('#relation').val()),
+		  phone2 = ($('#phone2').val());
  // const index = await callStatic('getinsurePerson', [])
-
  await contractCall("createInsureance", [fName, lName, id1, phone,email,
  										 address, city, state, fName2,
- 										 lName2, phone2, email2, relation],0); 
+ 										 lName2, email2, relation, phone2],0); 
 
 		  insuredArray.push({
 		  	fName : fName,
@@ -197,9 +192,9 @@ $('#loader').show();
 		  		//Emergency contact details.
 		  	fName2 : fName2,
 		  	lName2 : lName2,
-		  	phone2 : phone2,
 		  	email2 : email2,
 		  	relation : relation,
+		  	phone2 : phone2,
 
 		  	index : insureArray.length + 1
 		})
