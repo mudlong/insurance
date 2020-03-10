@@ -178,28 +178,28 @@ $('#loader').show();
 
  // const index = await callStatic('getinsurePerson', [])
 
- const sure = await contractCall("createInsureance", [fName, lName, id1, phone,email,
+ await contractCall("createInsureance", [fName, lName, id1, phone,email,
  										 address, city, state, fName2,
  										 lName2, phone2, email2, relation],0); 
 
 		  insuredArray.push({
-		  	fName : sure.fName,
-		  	lName : sure.lName,
+		  	fName : fName,
+		  	lName : lName,
 		  	// sex   : sex,
 		  	// dob : dob,
-		  	id1   : sure.id1,
+		  	id1   : id1,
 		  	// idd	  : idd,
-		  	phone : sure.phone,
-		  	email : sure.email,
-		  	address : sure.address,
-		  	city : sure.city,
-		  	state : sure.state,
+		  	phone : phone,
+		  	email : email,
+		  	address : address,
+		  	city : city,
+		  	state : state,
 		  		//Emergency contact details.
-		  	fName2 : sure.fName2,
-		  	lName2 : sure.lName2,
-		  	phone2 : sure.phone2,
-		  	email2 : sure.email2,
-		  	relation : sure.relation,
+		  	fName2 : fName2,
+		  	lName2 : lName2,
+		  	phone2 : phone2,
+		  	email2 : email2,
+		  	relation : relation,
 
 		  	index : insureArray.length + 1
 		})
